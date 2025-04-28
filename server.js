@@ -1,9 +1,13 @@
 const express=require("express");
 const app = express()
-app.get('/products',(req,res)=>{res.json({name:'tea_leaves', price:1000})})
 
+const routes=require('./routes/index')
+
+//authentication: bolto andar aane ki ijazat hai ya nai
+//authorization: andar aaye baad kam karna ka permission hai ya nai
+//.use is for middlewares
+
+
+app.use('/',routes);
 app.listen(3000,()=>{console.log(' Server Listening on Port no: 3000')})
 
-console.log("As Salamulalikum, This is Mohammed")
-
-console.log("walaikumasslam kya hora yaha pe")
