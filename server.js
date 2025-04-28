@@ -10,4 +10,5 @@ const routes=require('./routes/index')
 
 app.use('/',routes);
 app.listen(3000,()=>{console.log(' Server Listening on Port no: 3000')})
+console.log("Samjhe?, Ya Samjhaun?")
 
